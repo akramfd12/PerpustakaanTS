@@ -1,5 +1,6 @@
-<html>
-<?php
+<?php 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class M_user extends CI_Model
 // Usermodel yang menghubungkannya dengan tabel users
 {
