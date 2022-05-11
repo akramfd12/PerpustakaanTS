@@ -7,7 +7,7 @@ class M_pinjam extends CI_Model
         {
             $this->load->database();
         }
-    function get_pinjam_buku() //Membuat fungsi untuk memanggil tabel koleksi_buku
+    function get_pinjam_buku() //Membuat fungsi untuk memanggil tabel pinjam_buku
         {
             return $this->db->get('pinjam')->result_array(); //result array untuk memanggil seluruh data
         }        
@@ -26,20 +26,18 @@ class M_pinjam extends CI_Model
             $this->db->where('id_pinjam', $a);
             return $this->db->get('pinjam')->row_array(); //row array untuk memanggil 1 data
         }
-    function insert($a)
+    function insert($a) //untuk menambahkan pinjam
         {
             $data = [
                 'id_buku' => $a['id_buku'],
                 'id' => $a['id'],
                 'nama' => $a['nama'],
                 'judul' => $a['judul'],
-                // 'tanggal_pinjam' => $a['tanggal_pinjam'],
                 'batas_waktu' => $a['batas_waktu'],
-                // 'status' => $a['status']  
             ];
             return $this->db->insert('pinjam', $data);
         }  
-    function pinjam_buku($a) 
+    function pinjam_buku($a) //Menggabungkan 2 tabel yaitu users dan pinjam
         {      
 
             $this->db->select('*');
@@ -48,7 +46,7 @@ class M_pinjam extends CI_Model
             $this->db->join('users', 'pinjam.id=users.id');
             return $this->db->get()->row_array();
         }
-    function selesai($a) //membuat fungsi delete berdasarkan id yang dipilih
+    function selesai($a) 
         {
             $this->db->where('id_pinjam', $a);
             return $this->db->delete('pinjam');

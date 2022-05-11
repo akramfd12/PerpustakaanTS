@@ -39,6 +39,7 @@
                                 <td><?php echo $p['judul'] ?> <br>
                                 <td><?php echo $p['tanggal_pinjam'] ?></td>
                                 <td><?php echo $p['batas_waktu'] ?></td>
+                                <!-- Untuk membuat status waktu Masa Pinjam -->
                                 <td><?php $sekarang = strtotime(date("d-m-Y"));
                                 $bts_waktu = strtotime($p['batas_waktu']);
                                 $selisih = $bts_waktu - $sekarang;

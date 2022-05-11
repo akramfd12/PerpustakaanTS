@@ -2,7 +2,7 @@
 <html lang="en">
 
 <title>Detail Peminjam</title>
-<!-- Detail user -->
+<!-- Detail Peminjam -->
 
 <body>
     <div class="container mt-5">
@@ -11,7 +11,7 @@
                 <div class="card-header bg-light">
                     <h2 class="text-dark">Detail Peminjam</h2>
                 </div>
-                <!-- Isi dari detail user -->
+                <!-- Isi dari detail Peminjam -->
                 <div class="card-body">
                     <div class="row">
                         <div class="col-10">

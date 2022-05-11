@@ -2,7 +2,7 @@
 <html lang="en">
 
 <title>Pinjam Buku</title>
-<!-- Form Edit User-->
+<!-- Form Pinjam Buku-->
 
 <body>
     <div class="container mt-5">
@@ -37,20 +37,10 @@
                                     <input type="text" name="nama" class="form-control" id="nama" readonly
                                         value="<?php echo $this->session->userdata('nama') ?>">
                                 </div>
-                                <!-- <div class="mb-3">
-                                    <label for="tanggal_pinjam" class="form-label">Tanggal Pinjam</label>
-                                    <input type="date" name="tanggal_pinjam" class="form-control" id="tanggal_pinjam">
-                                </div> -->
                                 <div class="mb-3">
                                     <label for="batas_waktu" class="form-label">Tanggal Kembali</label>
                                     <input type="date" name="batas_waktu" class="form-control" id="batas_waktu">
                                 </div>
-                                <!-- <div class="mb-3">
-                                    <label for="status" class="form-label">Status</label>
-                                    <select class="form-select" name="status" id="status">
-                                        <option selected="1">Meminjam Buku</option>
-                                    </select>
-                                </div> -->
                                 <button type="submit" class="btn btn-primary">Submit</button>
                                 <button type="button" class="btn btn-danger" onclick="history.back();">Kembali</button>
                             </form>
