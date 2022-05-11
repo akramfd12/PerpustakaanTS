@@ -14,7 +14,7 @@
                 <!-- Isi dari detail Peminjam -->
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-10">
+                        <div class="col-8">
                             <table class="table-hover">
                                 <tr>
                                     <th>Nama</th>
@@ -53,9 +53,12 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-2">
+                        <div class="col-4">
                             <td><img style="width:128px"
                                     src="<?php echo base_url('assets/img/fotoprofile/' . $detail['profile']) ?>" alt="">
+                            </td>
+                            <td><img style="width:128px"
+                                    src="<?php echo base_url('assets/img/cover/' . $detail['cover']) ?>" alt="">
                             </td>
                         </div>
                     </div>

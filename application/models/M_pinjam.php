@@ -44,6 +44,7 @@ class M_pinjam extends CI_Model
             $this->db->where('id_pinjam', $a);
             $this->db->from('pinjam');
             $this->db->join('users', 'pinjam.id=users.id');
+            $this->db->join('koleksi_buku', 'pinjam.id_buku=koleksi_buku.id_buku');
             return $this->db->get()->row_array();
         }
     function selesai($a) 
