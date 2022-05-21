@@ -40,27 +40,28 @@
                                 <td><?php echo $p['tanggal_pinjam'] ?></td>
                                 <td><?php echo $p['batas_waktu'] ?></td>
                                 <!-- Untuk membuat status waktu Masa Pinjam -->
-                                <td><?php 
-                                $sekarang = strtotime(date("d-m-Y"));
-                                $bts_waktu = strtotime($p['batas_waktu']);
-                                $selisih = $bts_waktu - $sekarang;
-                                if($selisih > 0)
-                                {
-                                echo "Masa Pinjam";
-                                }
-                                elseif($selisih == 0)
-                                {
-                                echo "Jatuh Tempo";
-                                }
-                                else{
-                                echo "Terlambat";
-                                }
-                                      ?></td>
-                                <td class="d-grid gap-2 d-md-flex justify-content-md-end"> 
-                                    <a href="pinjam/detail_pinjam/<?php echo $p['id_pinjam']; ?>"
-                                        class="btn btn-primary">Detail
-                                    <a href="pinjam/selesai/<?php echo $p['id_pinjam']; ?>"
-                                        class="btn btn-success">Selesai</a></td>
+                                <td>
+                                    <?php 
+                                    $sekarang = strtotime(date("d-m-Y"));
+                                    $bts_waktu = strtotime($p['batas_waktu']);
+                                    $selisih = $bts_waktu - $sekarang;
+                                    if($selisih > 0)
+                                    {
+                                    echo "Masa Pinjam";
+                                    }
+                                    elseif($selisih == 0)
+                                    {
+                                    echo "Jatuh Tempo";
+                                    }
+                                    else{
+                                    echo "Terlambat";
+                                    }
+                                        ?></td>
+                                    <td class="d-grid gap-2 d-md-flex justify-content-md-end"> 
+                                        <a href="pinjam/detail_pinjam/<?php echo $p['id_pinjam']; ?>"
+                                            class="btn btn-primary">Detail
+                                        <a href="pinjam/selesai/<?php echo $p['id_pinjam']; ?>"
+                                            class="btn btn-success">Selesai</a></td>
                             </tr>
                             <?php }
                             endforeach; ?>
