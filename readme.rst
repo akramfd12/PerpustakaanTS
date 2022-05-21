@@ -1,5 +1,7 @@
+# Read Please
 Simple library website with CodeIgniter 3, Bootstrap 5, PHP 7
 With simple Create, Read, Update, Delete Feature
+
 
 How to use website
 1. Download code and database
@@ -8,3 +10,5 @@ How to use website
 or uou can use my account
 email = user@gmail.com
 pass = 1234
+
+How to
